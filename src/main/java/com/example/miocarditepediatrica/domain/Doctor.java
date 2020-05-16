@@ -11,7 +11,7 @@ public class Doctor implements Serializable {
     private String crm;
     private String specialty;
     private String birthDate;
-
+    private Authentication authentication;
 
     public String getId() {
         return id;

@@ -16,8 +16,8 @@ public class Authentication {
         this.personRole = personRole;
     }
 
-    private String verifyLogin(String login, String password){
-        return null;
+    public Boolean verifyLogin(String login, String password){
+        return this.login.equals(login) && this.password.equals(password);
     }
 
 }
