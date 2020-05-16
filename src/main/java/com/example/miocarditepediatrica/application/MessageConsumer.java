@@ -1,4 +1,4 @@
-package com.example.miocarditepediatrica.borda;
+package com.example.miocarditepediatrica.application;
 
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;

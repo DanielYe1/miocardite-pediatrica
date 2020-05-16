@@ -1,4 +1,4 @@
-package com.example.miocarditepediatrica.domain;
+package com.example.miocarditepediatrica.domain.user;
 
 import org.springframework.data.mongodb.core.index.Indexed;
 

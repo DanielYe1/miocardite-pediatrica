@@ -1,4 +1,4 @@
-package com.example.miocarditepediatrica.domain;
+package com.example.miocarditepediatrica.domain.user;
 
 import java.util.List;
 

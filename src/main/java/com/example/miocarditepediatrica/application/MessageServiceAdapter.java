@@ -1,7 +1,7 @@
-package com.example.miocarditepediatrica.borda;
+package com.example.miocarditepediatrica.application;
 
-import com.example.miocarditepediatrica.domain.Doctor;
-import com.example.miocarditepediatrica.domain.Patient;
+import com.example.miocarditepediatrica.domain.user.Doctor;
+import com.example.miocarditepediatrica.domain.user.Patient;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
