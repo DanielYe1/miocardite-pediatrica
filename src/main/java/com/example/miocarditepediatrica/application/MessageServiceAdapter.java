@@ -7,6 +7,8 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
+
 @Service
 class MessageServiceAdapter implements MessageServicePort {
 
@@ -61,7 +63,7 @@ class MessageServiceAdapter implements MessageServicePort {
         Patient patient = new Patient(
                 node.get("id").asText(),
                 node.get("nome").asText(),
-                node.get("nomeResponsavel").asText(),
+                Collections.singletonList(node.get("nomeResponsavel").asText()),
                 node.get("altura").asText(),
                 node.get("peso").asText(),
                 node.get("dataDeNascimento").asText()

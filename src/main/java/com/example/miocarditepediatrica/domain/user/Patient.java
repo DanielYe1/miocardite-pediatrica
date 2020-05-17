@@ -1,8 +1,12 @@
 package com.example.miocarditepediatrica.domain.user;
 
+import org.springframework.data.annotation.Id;
+
+import java.util.Collections;
 import java.util.List;
 
 public class Patient {
+    @Id
     private String id;
     private String name;
     private List<String> responsibleIds;
@@ -21,23 +25,18 @@ public class Patient {
         this.birthDate = birthDate;
     }
 
-    @Override
-    public String toString() {
-        return "Patient{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", responsibleName='" + responsibleIds + '\'' +
-                ", height='" + height + '\'' +
-                ", weight='" + weight + '\'' +
-                ", birthDate='" + birthDate + '\'' +
-                '}';
+    private List<String> retrievePatientExams(String responsibleId){
+        if(responsibleIds.contains(responsibleId)){
+            return this.sensibleData.getExamIds();
+        }
+        return Collections.emptyList();
     }
 
-    private SensibleData retrieveSensibleData(String id){
-        if(responsibleIds.contains(id)){
-            return this.sensibleData;
+    private List<String> retrievePatientAnswers(String responsibleId){
+        if(responsibleIds.contains(responsibleId)){
+            return this.sensibleData.getAnswers();
         }
-        return null;
+        return Collections.emptyList();
     }
 
     private Boolean validateLogin(String user, String password){

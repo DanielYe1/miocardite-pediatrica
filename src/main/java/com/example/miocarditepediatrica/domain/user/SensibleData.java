@@ -2,12 +2,12 @@ package com.example.miocarditepediatrica.domain.user;
 
 import java.util.List;
 
-public class SensibleData {
+class SensibleData {
     private List<String> examIds;
     private String diagnostic;
     private List<String> answers;
 
-    public SensibleData(List<String> examIds, String diagnostic, List<String> answers) {
+    SensibleData(List<String> examIds, String diagnostic, List<String> answers) {
         this.examIds = examIds;
         this.diagnostic = diagnostic;
         this.answers = answers;
