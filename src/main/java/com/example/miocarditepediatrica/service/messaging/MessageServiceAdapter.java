@@ -19,6 +19,8 @@ class MessageServiceAdapter implements MessageServicePort {
             JsonNode node = mapper.readTree(message);
             String status = getStatusFromJsonNode(node);
             Doctor doctor = getDoctorFromJsonNode(node);
+
+
         } catch (JsonProcessingException e) {
             System.out.println("Erro ao parsear");
         }
