@@ -1,5 +1,6 @@
-package com.example.miocarditepediatrica.application;
+package com.example.miocarditepediatrica.out.messaging;
 
+import com.example.miocarditepediatrica.service.messaging.MessageServicePort;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

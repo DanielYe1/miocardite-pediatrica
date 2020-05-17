@@ -1,4 +1,4 @@
-package com.example.miocarditepediatrica.application;
+package com.example.miocarditepediatrica.service.messaging;
 
 import com.example.miocarditepediatrica.domain.user.Doctor;
 import com.example.miocarditepediatrica.domain.user.Patient;

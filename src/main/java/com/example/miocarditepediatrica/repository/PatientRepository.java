@@ -1,4 +1,4 @@
-package com.example.miocarditepediatrica.infrastructure;
+package com.example.miocarditepediatrica.repository;
 
 import com.example.miocarditepediatrica.domain.user.Patient;
 import org.springframework.data.mongodb.repository.MongoRepository;
