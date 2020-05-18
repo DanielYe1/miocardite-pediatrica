@@ -25,6 +25,8 @@ public class Patient {
         this.birthDate = birthDate;
     }
 
+
+
     private List<String> retrievePatientExams(String responsibleId){
         if(responsibleIds.contains(responsibleId)){
             return this.sensibleData.getExamIds();
@@ -32,11 +34,11 @@ public class Patient {
         return Collections.emptyList();
     }
 
-    private List<String> retrievePatientAnswers(String responsibleId){
+    private String retrievePatientDiagnostic(String responsibleId){
         if(responsibleIds.contains(responsibleId)){
-            return this.sensibleData.getAnswers();
+            return this.sensibleData.getDiagnostic();
         }
-        return Collections.emptyList();
+        return "invalid responsibleId";
     }
 
     private Boolean validateLogin(String user, String password){
