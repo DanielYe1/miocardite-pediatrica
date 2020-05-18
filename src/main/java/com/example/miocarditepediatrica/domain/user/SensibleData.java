@@ -18,4 +18,8 @@ class SensibleData {
     public String getDiagnostic() {
         return diagnostic;
     }
+
+    public void setDiagnostic(String diagnostic) {
+        this.diagnostic = diagnostic;
+    }
 }

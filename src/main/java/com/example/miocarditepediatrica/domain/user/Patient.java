@@ -25,16 +25,18 @@ public class Patient {
         this.birthDate = birthDate;
     }
 
+    public void setPatientDiagnostic(String diagnostic){
+        this.sensibleData.setDiagnostic(diagnostic);
+    }
 
-
-    private List<String> retrievePatientExams(String responsibleId){
+    public List<String> retrievePatientExams(String responsibleId){
         if(responsibleIds.contains(responsibleId)){
             return this.sensibleData.getExamIds();
         }
         return Collections.emptyList();
     }
 
-    private String retrievePatientDiagnostic(String responsibleId){
+    public String retrievePatientDiagnostic(String responsibleId){
         if(responsibleIds.contains(responsibleId)){
             return this.sensibleData.getDiagnostic();
         }

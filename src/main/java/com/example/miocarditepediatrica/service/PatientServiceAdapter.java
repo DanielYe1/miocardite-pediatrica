@@ -41,8 +41,14 @@ public class PatientServiceAdapter implements PatientServicePort {
         return patientRepository.findAll();
     }
 
-    public boolean addExamListToPatient(String patientId, List<String> examIds){
-
-        return true;
+    public boolean addDiagnosticToPatient(String patientId, String diagnostic) {
+        Optional<Patient> optionalPatient = patientRepository.findById(patientId);
+        if (optionalPatient.isPresent()) {
+            Patient patient = optionalPatient.get();
+            patient.setPatientDiagnostic(diagnostic);
+            patientRepository.save(patient);
+            return true;
+        }
+        return false;
     }
 }

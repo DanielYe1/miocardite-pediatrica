@@ -11,5 +11,5 @@ public interface PatientServicePort {
     boolean updatePatient(String id, Patient doctor);
     Optional<Patient> findById(String id);
     List<Patient> findAll();
-    boolean addExamListToPatient(String patientId, List<String> examIds);
+    boolean addDiagnosticToPatient(String patientId, String diagnostic);
 }
