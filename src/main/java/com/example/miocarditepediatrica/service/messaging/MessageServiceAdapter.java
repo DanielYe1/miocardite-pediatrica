@@ -2,15 +2,20 @@ package com.example.miocarditepediatrica.service.messaging;
 
 import com.example.miocarditepediatrica.domain.user.Doctor;
 import com.example.miocarditepediatrica.domain.user.Patient;
+import com.example.miocarditepediatrica.service.DoctorServicePort;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Collections;
 
 @Service
 class MessageServiceAdapter implements MessageServicePort {
+
+    @Autowired
+    DoctorServicePort doctorServicePort;
 
     @Override
     public void processDoctorMessage(String message) {
@@ -20,6 +25,14 @@ class MessageServiceAdapter implements MessageServicePort {
             String status = getStatusFromJsonNode(node);
             Doctor doctor = getDoctorFromJsonNode(node);
 
+            switch (status){
+                case "create":
+                    doctorServicePort.addDoctor(doctor);
+                    break;
+                case "delete":
+                    doctorServicePort.deleteDoctor(doctor.getId());
+                    break;
+            }
 
         } catch (JsonProcessingException e) {
             System.out.println("Erro ao parsear");
