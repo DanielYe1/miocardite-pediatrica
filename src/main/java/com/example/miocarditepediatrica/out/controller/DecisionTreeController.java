@@ -23,7 +23,7 @@ public class DecisionTreeController {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
 
-        String treeNode = template.postForObject("http://localhost:8080/node", answer, String.class);
+        String treeNode = template.postForObject("http://localhost:8083/node", answer, String.class);
         return new ResponseEntity(treeNode, HttpStatus.OK);
     }
 
