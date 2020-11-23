@@ -1,0 +1,1 @@
+./mvnw package && java -jar target/miocardite-pediatrica-0.0.1-SNAPSHOT.jar &
