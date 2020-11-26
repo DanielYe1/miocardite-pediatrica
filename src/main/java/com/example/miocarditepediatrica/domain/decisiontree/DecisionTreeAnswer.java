@@ -37,7 +37,7 @@ public class DecisionTreeAnswer {
         return answers;
     }
 
-    public void setAnswers(String answers) {
-        this.answers = Collections.singletonList(answers);
+    public void setAnswers(List<String> answers) {
+        this.answers = answers;
     }
 }
